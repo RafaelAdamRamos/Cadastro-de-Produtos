@@ -1,6 +1,6 @@
 public class Produto {
-    private String nomeProduto, codProduto;
-    private double precoProduto = 00.00;
+     String nomeProduto, codProduto;
+     double precoProduto = 00.00;
 
     public Produto(String nomeProduto, String codProduto, double precoProduto) {
         this.nomeProduto = nomeProduto;
@@ -9,6 +9,6 @@ public class Produto {
     }
 
     public void exibirInformacoes() {
-        System.out.println("Cod: " + codProduto + "Nome do Produto: " + nomeProduto + "Preço: " + precoProduto);
+        System.out.println("Cod: " + codProduto + "\nNome do Produto: " + nomeProduto + "\nPreço: " + precoProduto);
     }
 }
