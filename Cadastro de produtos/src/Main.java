@@ -43,7 +43,7 @@ public class Main {
                     System.out.println("Informe a marca do eletrônico: ");
                     marcaEletronico = sc.nextLine();
 
-                    System.out.println("Informe a garantia: ");
+                    System.out.println("Informe a garantia em meses: ");
                     garantiaEletronico = sc.nextInt();
 
                     Eletronico eletronico = new Eletronico(codProduto, nomeProduto, precoProduto, marcaEletronico, garantiaEletronico);
@@ -61,6 +61,7 @@ public class Main {
 
                     System.out.println("Informe o preço: ");
                     precoProduto = sc.nextDouble();
+                    sc.nextLine();
 
                     System.out.println("Informe o tamanho da roupa: ");
                     tamanhoRoupa = sc.nextLine();
@@ -83,6 +84,7 @@ public class Main {
 
                     System.out.println("Informe o preço: ");
                     precoProduto = sc.nextDouble();
+                    sc.nextLine();
 
                     System.out.println("Informe a data de validade do alimento: ");
                     dataValidade = sc.nextLine();
@@ -102,6 +104,29 @@ public class Main {
                         e.exibirInformacoes();
                         System.out.println("-----------------");
                     }
+                    aguarde();
+                    break;
+
+                case 5:
+                    System.out.println("\nRoupas registradas:");
+                    for (Roupa r : roupas) {
+                        r.exibirInformacoes();
+                        System.out.println("-----------------");
+                    }
+                    aguarde();
+                    break;
+
+                case 6:
+                    System.out.println("\nAlimentos registradas:");
+                    for (Alimento a : alimentos) {
+                        a.exibirInformacoes();
+                        System.out.println("-----------------");
+                    }
+                    aguarde();
+                    break;
+
+                default:
+                    System.out.println("Escolha inválida!");
                     aguarde();
                     break;
             }

@@ -3,7 +3,7 @@ public class Eletronico extends Produto {
     int garantiaEletronico = 0;
 
 
-    public Eletronico(String nomeProduto, String codProduto, double precoProduto, String marcaEletronico, int garantiaEletronico) {
+    public Eletronico(String codProduto, String nomeProduto, double precoProduto, String marcaEletronico, int garantiaEletronico) {
         super(nomeProduto, codProduto, precoProduto);
         this.marcaEletronico = marcaEletronico;
         this.garantiaEletronico = garantiaEletronico;
@@ -12,6 +12,6 @@ public class Eletronico extends Produto {
     @Override
     public void exibirInformacoes() {
         super.exibirInformacoes();
-        System.out.println("Marca: " + marcaEletronico + "\nAno garantia: " + garantiaEletronico);
+        System.out.println("Marca: " + marcaEletronico + "\nMeses garantia: " + garantiaEletronico);
     }
 }
