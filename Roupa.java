@@ -1,4 +1,20 @@
 public class Roupa extends Produto {
+    public String getTamanhoRoupa() {
+        return tamanhoRoupa;
+    }
+
+    public void setTamanhoRoupa(String tamanhoRoupa) {
+        this.tamanhoRoupa = tamanhoRoupa;
+    }
+
+    public String getMaterialRoupa() {
+        return materialRoupa;
+    }
+
+    public void setMaterialRoupa(String materialRoupa) {
+        this.materialRoupa = materialRoupa;
+    }
+
     //Declarando variáveis da classe filho Roupa
     String tamanhoRoupa = "", materialRoupa = "";
 
@@ -6,8 +22,6 @@ public class Roupa extends Produto {
     public Roupa(String codProduto, String nomeProduto, double precoProduto, String tamanhoRoupa, String materialRoupa) {
         //Import das variáveis da classe Pai
         super(nomeProduto, codProduto, precoProduto);
-        this.tamanhoRoupa = tamanhoRoupa;
-        this.materialRoupa = materialRoupa;
     }
 
     //Sobrescreve Função da classe Pai

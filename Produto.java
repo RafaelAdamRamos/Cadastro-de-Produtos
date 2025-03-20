@@ -14,4 +14,24 @@ public class Produto {
     public void exibirInformacoes() {
         System.out.println("Cod: " + codProduto + "\nNome do Produto: " + nomeProduto + "\nPreço: " + precoProduto);
     }
+
+    public String getCodProduto() {
+        return codProduto;
+    }
+
+    public String getNomeProduto() {
+        return nomeProduto;
+    }
+
+    public void setNomeProduto() {
+        this.nomeProduto = nomeProduto;
+    }
+
+    public double getPrecoProduto() {
+        return precoProduto;
+    }
+
+    public void setPrecoProduto() {
+        this.precoProduto = precoProduto;
+    }
 }

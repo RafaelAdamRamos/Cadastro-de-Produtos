@@ -1,4 +1,20 @@
 public class Alimento extends Produto {
+    public String getCategoriaAli() {
+        return categoriaAli;
+    }
+
+    public void setCategoriaAli(String categoriaAli) {
+        this.categoriaAli = categoriaAli;
+    }
+
+    public String getDataValidade() {
+        return dataValidade;
+    }
+
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+
     //Declarando variáveis da classe filho Alimento
     String categoriaAli, dataValidade;
 
@@ -6,9 +22,8 @@ public class Alimento extends Produto {
     public Alimento(String codProduto, String nomeProduto, double precoProduto, String dataValidade, String categoriaAli) {
         //Import das variáveis da classe Pai
         super(nomeProduto, codProduto, precoProduto);
-        this.dataValidade = dataValidade;
-        this.categoriaAli = categoriaAli;
     }
+
     //Sobrescreve Função da classe Pai
     @Override
     public void exibirInformacoes() {
