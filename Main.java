@@ -16,7 +16,7 @@ public class Main {
         // Declaração de variáveis para armazenar informações do produto
         String nomeProduto = "", codProduto = "", marcaEletronico = "", tamanhoRoupa = "", materialRoupa = "", categoriaAli = "", dataValidade = "", pressioneParaCont = "";
         double precoProduto;
-        int escolhaInicial = 0, garantiaEletronico = 0, escolhaRegist = 0, escolhaList = 0, escolhaAlt;
+        int escolhaInicial = 0, garantiaEletronico = 0, escolhaRegist = 0, escolhaList = 0, escolhaAlt = 0, escolhaExc = 0;
         boolean codEncontrado = false;
 
 
@@ -31,7 +31,7 @@ public class Main {
         // Loop principal do programa para interagir com o usuário até que ele decida sair (-1)
         while (escolhaInicial != -1) {
             // Menu de opções para o usuário
-            System.out.println("Bem vindo ao sistema de cadastro de produto. \n 1 - Registrar  \n 2 - Listar \n 3 - Alterar \n-1 - Finalizar Programa \nO que deseja fazer?");
+            System.out.println("Bem vindo ao sistema de cadastro de produto. \n 1 - Registrar  \n 2 - Listar \n 3 - Alterar \n 4 - Excluir \n-1 - Finalizar Programa \nO que deseja fazer?");
             escolhaInicial = sc.nextInt(); // Captura a escolha do usuário
             sc.nextLine(); // Consome a quebra de linha
 
@@ -39,6 +39,7 @@ public class Main {
                 case 1:
                     System.out.println("Qual tipo de produto deseja registrar? \n1 - Eletrônico \n2 - Roupa \n3 - Alimento");
                     escolhaRegist = sc.nextInt();
+                    sc.nextLine();
                     if (escolhaRegist == 1) {
                         // Cadastro de eletrônico
                         System.out.println("Informe o código do produto: ");
@@ -119,6 +120,7 @@ public class Main {
                 case 2:
                     System.out.println("Qual tipo de produto deseja listar? \n1 - Eletrônico \n2 - Roupa \n3 - Alimento");
                     escolhaList = sc.nextInt();
+                    sc.nextLine();
                     if (escolhaList == 1) {
                         // Listagem de eletrônicos
                         if (eletronicos.isEmpty()) {
@@ -186,10 +188,10 @@ public class Main {
                                 System.out.println("Produto encontrado! Informe os novos dados:");
 
                                 System.out.println("Novo nome: ");
-                                e.setNomeProduto();
+                                e.setNomeProduto(sc.nextLine());
 
                                 System.out.println("Novo preço: ");
-                                e.setPrecoProduto();
+                                e.setPrecoProduto(sc.nextDouble());
                                 sc.nextLine();
 
                                 System.out.println("Nova marca: ");
@@ -210,10 +212,10 @@ public class Main {
                                 System.out.println("Produto encontrado! Informe os novos dados:");
 
                                 System.out.println("Novo nome: ");
-                                r.setNomeProduto();
+                                r.setNomeProduto(sc.nextLine());
 
                                 System.out.println("Novo preço: ");
-                                r.setPrecoProduto();
+                                r.setPrecoProduto(sc.nextDouble());
                                 sc.nextLine();
 
                                 System.out.println("Novo tamanho: ");
@@ -233,10 +235,10 @@ public class Main {
                                 System.out.println("Produto encontrado! Informe os novos dados:");
 
                                 System.out.println("Novo nome: ");
-                                a.setNomeProduto();
+                                a.setNomeProduto(sc.nextLine());
 
                                 System.out.println("Novo preço: ");
-                                a.setPrecoProduto();
+                                a.setPrecoProduto(sc.nextDouble());
                                 sc.nextLine();
 
                                 System.out.println("Nova data de validade: ");
@@ -259,7 +261,98 @@ public class Main {
 
                     aguarde();
                     break;
+/* Alterar
+                case 4:
+                    System.out.println("Qual tipo de produto deseja excluir? \n1 - Eletrônico \n2 - Roupa \n3 - Alimento");
+                    escolhaExc = sc.nextInt();
+                    sc.nextLine(); // Limpa o buffer
 
+                    System.out.println("Informe o código do produto que deseja alterar: ");
+                    codProduto = sc.nextLine();
+
+                    codEncontrado = false; // Resetando a variável de controle
+
+                    if (escolhaAlt == 1) {
+                        for (Eletronico e : eletronicos) {
+                            if (e.getCodProduto().equals(codProduto)) {
+                                codEncontrado = true;
+                                System.out.println("Produto encontrado! Informe os novos dados:");
+
+                                System.out.println("Novo nome: ");
+                                e.setNomeProduto(sc.nextLine());
+
+                                System.out.println("Novo preço: ");
+                                e.setPrecoProduto(sc.nextDouble());
+                                sc.nextLine();
+
+                                System.out.println("Nova marca: ");
+                                e.setMarcaEletronico(sc.nextLine());
+
+                                System.out.println("Nova garantia (meses): ");
+                                e.setGarantiaEletronico(sc.nextInt());
+                                sc.nextLine();
+
+                                System.out.println("Produto atualizado com sucesso!");
+                                break;
+                            }
+                        }
+                    } else if (escolhaAlt == 2) {
+                        for (Roupa r : roupas) {
+                            if (r.getCodProduto().equals(codProduto)) {
+                                codEncontrado = true;
+                                System.out.println("Produto encontrado! Informe os novos dados:");
+
+                                System.out.println("Novo nome: ");
+                                r.setNomeProduto(sc.nextLine());
+
+                                System.out.println("Novo preço: ");
+                                r.setPrecoProduto(sc.nextDouble());
+                                sc.nextLine();
+
+                                System.out.println("Novo tamanho: ");
+                                r.setTamanhoRoupa(sc.nextLine());
+
+                                System.out.println("Novo material: ");
+                                r.setMaterialRoupa(sc.nextLine());
+
+                                System.out.println("Produto atualizado com sucesso!");
+                                break;
+                            }
+                        }
+                    } else if (escolhaAlt == 3) {
+                        for (Alimento a : alimentos) {
+                            if (a.getCodProduto().equals(codProduto)) {
+                                codEncontrado = true;
+                                System.out.println("Produto encontrado! Informe os novos dados:");
+
+                                System.out.println("Novo nome: ");
+                                a.setNomeProduto(sc.nextLine());
+
+                                System.out.println("Novo preço: ");
+                                a.setPrecoProduto(sc.nextDouble());
+                                sc.nextLine();
+
+                                System.out.println("Nova data de validade: ");
+                                a.setDataValidade(sc.nextLine());
+
+                                System.out.println("Nova categoria: ");
+                                a.setCategoriaAli(sc.nextLine());
+
+                                System.out.println("Produto atualizado com sucesso!");
+                                break;
+                            }
+                        }
+                    } else {
+                        System.out.println("Opção inválida.");
+                    }
+
+                    if (!codEncontrado) {
+                        System.out.println("Código do produto não encontrado.");
+                    }
+
+                    aguarde();
+                    break;
+               */
                 case -1:
                     // Finalização do programa
                     System.out.println("Finalizando sistema...");

@@ -22,6 +22,8 @@ public class Roupa extends Produto {
     public Roupa(String codProduto, String nomeProduto, double precoProduto, String tamanhoRoupa, String materialRoupa) {
         //Import das variáveis da classe Pai
         super(nomeProduto, codProduto, precoProduto);
+        this.materialRoupa = materialRoupa;
+        this.tamanhoRoupa = tamanhoRoupa;
     }
 
     //Sobrescreve Função da classe Pai

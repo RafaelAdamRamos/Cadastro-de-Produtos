@@ -22,6 +22,8 @@ public class Alimento extends Produto {
     public Alimento(String codProduto, String nomeProduto, double precoProduto, String dataValidade, String categoriaAli) {
         //Import das variáveis da classe Pai
         super(nomeProduto, codProduto, precoProduto);
+        this.categoriaAli = categoriaAli;
+        this.dataValidade = dataValidade;
     }
 
     //Sobrescreve Função da classe Pai

@@ -23,6 +23,8 @@ public class Eletronico extends Produto {
     public Eletronico(String codProduto, String nomeProduto, double precoProduto, String marcaEletronico, int garantiaEletronico) {
         //Import das variáveis da classe Pai
         super(nomeProduto, codProduto, precoProduto);
+        this.garantiaEletronico = garantiaEletronico;
+        this.marcaEletronico = marcaEletronico;
     }
 
     //Sobrescreve Função da classe Pai

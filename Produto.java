@@ -23,7 +23,7 @@ public class Produto {
         return nomeProduto;
     }
 
-    public void setNomeProduto() {
+    public void setNomeProduto(String nomeProduto) {
         this.nomeProduto = nomeProduto;
     }
 
@@ -31,7 +31,7 @@ public class Produto {
         return precoProduto;
     }
 
-    public void setPrecoProduto() {
+    public void setPrecoProduto(double precoProduto) {
         this.precoProduto = precoProduto;
     }
 }
