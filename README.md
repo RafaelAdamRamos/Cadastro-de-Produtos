@@ -1,70 +1,61 @@
-# Cadastro de Produtos (Java)
+# Product Registration (Java)
 
-> 🔧 **Projeto aprimorável**  
-> Este projeto é uma base de estudo em Java para cadastro e manipulação de produtos, com foco em lógica de classes, herança e estrutura de projeto. Pode ser expandido com persistência, interface gráfica ou conexão com banco de dados futuramente.
+> 🔧 **Extensible Project**  
+This project is a Java study base for product registration and manipulation, focusing on class logic, inheritance, and project structure. It can be expanded with persistence, a graphical interface, or database integration.
 
-## Descrição
+## Description
 
-Este repositório contém um sistema simples em **Java** que representa um cadastro de produtos com diferentes categorias (como alimentos, eletrônicos, roupas etc.). O projeto explora os conceitos de **classes, herança, encapsulamento e lógica de execução**, servindo como base para estudos ou aprimoramento em orientação a objetos.
+This repository contains a simple **Java** system that represents product registration with different categories (such as food, electronics, clothing, etc.). The project explores **classes, inheritance, encapsulation, and execution logic**, serving as a base for object-oriented studies or improvements.
 
-## Funcionalidade principal
+## Main Features
 
-- Representação de produtos por meio de classes Java
-- Tipos de produtos diferentes organizados por herança (`Alimento`, `Eletronico`, `Roupa`)
-- Classe principal (`Main.java`) que ilustra execução básica do sistema (entrada, processamento e saída)
+- Product representation through Java classes
+- Different product types organized via inheritance (`Food`, `Electronics`, `Clothing`)
+- Main class (`Main.java`) demonstrating basic execution (input, processing, output)
 
-## Estrutura do Projeto
+## Project Structure
 
-No projeto você encontrará os seguintes arquivos principais:
+| File | Description |
+|------|-------------|
+| `Product.java` | Base class representing a generic product |
+| `Food.java` | Subclass representing food |
+| `Electronics.java` | Subclass representing electronics |
+| `Clothing.java` | Subclass representing clothing |
+| `Main.java` | Main class for execution and basic tests |
 
-| Arquivo | Descrição |
-|---------|-----------|
-| `Produto.java` | Classe base que representa um produto genérico |
-| `Alimento.java` | Subclasse representando alimentos |
-| `Eletronico.java` | Subclasse representando eletrônicos |
-| `Roupa.java` | Subclasse representando roupas |
-| `Main.java` | Classe principal para execução e testes simples |
+## Technologies Used
 
-## Tecnologias Utilizadas
+- Java programming language
 
-- Linguagem de programação Java
+## How to Run
 
-## Como executar o projeto
-
-Siga os passos abaixo para compilar e rodar o projeto localmente:
-
-1. Clone o repositório:
-   ```bash
+1. Clone the repository  
+  ```bash
    git clone https://github.com/RafaelAdamRamos/Cadastro-de-Produtos.git
-
-2. Acesse a pasta do projeto:
-
-   ```bash
+  ```
+   
+2. Navigate to the project folder  
+  ```bash
    cd Cadastro-de-Produtos
    ```
-3. Compile os arquivos Java:
 
-   ```bash
+3. Compile the Java files  
+  ```bash
    javac *.java
    ```
-4. Execute a aplicação:
 
+4. Run the application  
    ```bash
    java Main
    ```
 
-> 💡 Certifique-se de ter o JDK instalado e configurado no seu sistema antes de compilar.
+## Possible Improvements
 
-## Possíveis melhorias
+- Data persistence (file or database)
+- Interactive terminal menu
+- Input validation and business rules
+- Graphical user interface (GUI)
 
-Este projeto pode ser expandido com funcionalidades como:
+## Notes
 
-* **Persistência de dados** (arquivo ou banco de dados)
-* **Menu interativo no terminal**
-* **Validações de entrada e regras de negócio**
-* **Interface gráfica (GUI)**
-
-## Observações
-
-* Projeto voltado a fins de estudo de lógica e estrutura de código em Java
-* Pode ser aprimorado conforme novos requisitos ou aprendizado de novas tecnologias
+- Project aimed at studying Java logic and code structure
