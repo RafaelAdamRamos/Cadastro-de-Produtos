@@ -45,7 +45,7 @@ This repository contains a simple **Java** system that represents product regist
    ```
 
 4. Run the application  
-   ```bash
+  ```bash
    java Main
    ```
 
